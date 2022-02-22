@@ -27,6 +27,7 @@ public class SubscriptionController {
     @PostMapping(value = "/subscription", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public @ResponseBody
     ResponseEntity<Subscription> saveSubscription(@RequestBody Subscription subscription) {
+
         Subscription subsToSend = new Subscription();
         subsToSend.setId(UUID.randomUUID());
         subsToSend.setName(subscription.getName());
